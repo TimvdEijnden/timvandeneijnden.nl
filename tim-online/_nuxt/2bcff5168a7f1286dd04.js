@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{164:function(n,t,e){"use strict";e.r(t);var c=e(8),component=Object(c.a)({},(function(){var n=this.$createElement;return(this._self._c||n)("div",{class:this.$route.name},[this._v("\n  Info page content\n  ")])}),[],!1,null,null,null);t.default=component.exports}}]);
