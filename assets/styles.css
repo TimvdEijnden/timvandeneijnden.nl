@@ -1,5 +1,7 @@
 .green-text {
-    color: #6CEA7A;
+    background: linear-gradient(210deg,#310558 0%,#6c1dc6 100%);
+    background-clip: text;
+    color: transparent;
 }
 
 .purple-text, .button {
@@ -7,13 +9,18 @@
 }
 
 .top, .profiles {
-    background: linear-gradient(90deg,#46095e 0%,#6b42fc 100%);
+    background: linear-gradient(90deg,#c283db 0%,#5c35e7 100%);
 }
 
 .top h1 {
-    font-family: 'Bubblegum Sans', cursive;
-    font-weight: normal;
+    font-family: 'Lilita One', cursive;
+    font-weight: 100;
     font-size: 500%;
+    display: inline-flex;
+}
+
+.top .scroll {
+    color: #310558;
 }
 
 .top .subtitle span {
