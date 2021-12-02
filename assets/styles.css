@@ -1,7 +1,12 @@
-.green-text {
+.dark-text {
     background: linear-gradient(210deg,#310558 0%,#6c1dc6 100%);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
+}
+
+a {
+    color: #310558;
 }
 
 .purple-text, .button {
@@ -13,7 +18,7 @@
 }
 
 .top h1 {
-    font-family: 'Lilita One', cursive;
+    font-family: 'Bungee', cursive;
     font-weight: 100;
     font-size: 500%;
     display: inline-flex;
@@ -78,7 +83,7 @@
 }
 
 .workwith img {
-    width: 3em;
+    width: 2em;
     vertical-align: bottom;
 }
 
