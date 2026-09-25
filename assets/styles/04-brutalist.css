@@ -33,7 +33,7 @@ body { font-family: 'Courier Prime', monospace; background: #fff; color: #000; l
 .button:hover { transform: translate(2px, 2px); box-shadow: 4px 4px 0 #000; }
 .icon-row { display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 2.5rem; color: #000; }
 .simple-icon { width: 2.5rem; height: 2.5rem; fill: currentColor; }
-.profiles { background: #ffff00; border-top: 8px solid #000; border-bottom: 8px solid #000; }
+.profiles { background: #fff568; border-top: 8px solid #000; border-bottom: 8px solid #000; }
 .workwith { background: #f0f0f0; }
 @media (max-width: 600px) { .title { font-size: 2.5rem; } .hero { text-align: center; } .section { text-align: center; } .brand-grid, .button-group, .icon-row { justify-content: center; } }
 .hero::before {
