@@ -1,68 +1,189 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tim van den Eijnden - Frontend/Javascript Developer </title>
-    <meta name="title" content="Tim van den Eijnden - Frontend/Javascript Developer">
-    <meta name="description" content="Frontend/Javascript developer. Building for the web since 1999.">
+    <title>Tim van den Eijnden - Senior Full Stack Engineer</title>
+    <meta name="title" content="Tim van den Eijnden - Senior Full Stack Engineer">
+    <meta name="description" content="Senior Full Stack Engineer building for the web since 1999. Vue, TypeScript, Node.js, Java.">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://timvandeneijnden.nl/">
-    <meta property="og:title" content="Tim van den Eijnden - Frontend/Javascript Developer">
-    <meta property="og:description" content="Frontend/Javascript developer. Building for the web since 1999.">
+    <meta property="og:title" content="Tim van den Eijnden - Senior Full Stack Engineer">
+    <meta property="og:description" content="Senior Full Stack Engineer building for the web since 1999. Vue, TypeScript, Node.js, Java.">
     <meta property="og:image" content="https://timvandeneijnden.nl/assets/images/thumbnail.jpg">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://timvandeneijnden.nl/">
-    <meta property="twitter:title" content="Tim van den Eijnden - Frontend/Javascript Developer">
-    <meta property="twitter:description" content="Frontend/Javascript developer. Building for the web since 1999. ">
+    <meta property="twitter:title" content="Tim van den Eijnden - Senior Full Stack Engineer">
+    <meta property="twitter:description" content="Senior Full Stack Engineer building for the web since 1999. Vue, TypeScript, Node.js, Java.">
     <meta property="twitter:image" content="https://timvandeneijnden.nl/assets/images/thumbnail.png">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
     <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
-    <link href="assets/styles.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/styles/base.css">
+    <script>
+      (function () {
+        const styles = [
+          'current',
+          '01-minimalist',
+          '03-retro-90s',
+          '04-brutalist',
+          '06-cyberpunk',
+          '07-nature-organic',
+          '08-swiss-design',
+          '11-matrix',
+          '12-mr-robot',
+          '13-severance'
+        ];
+        const chosen = styles[Math.floor(Math.random() * styles.length)];
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'assets/styles/' + chosen + '.css';
+        document.head.appendChild(link);
+      })();
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSWMYFFE4R"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-SSWMYFFE4R');
     </script>
   </head>
   <body>
-    <section class="hero has-text-centered top">
-        <div class="hero-body">
-            <div class="container">
-              <h1 class="title dark-text">
-                  Tim van den Eijnden
-              </h1>
-              <h2 class="subtitle is-3 is-size-4-mobile scroll">
-                <strong>Frontend</strong>
-                <strong>Vue</strong>
-                <strong>React</strong>
-                <strong>Javascript</strong>
-                <strong>Node.js</strong>
-                <strong>Software</strong>
-                <span>&nbsp;Developer</span>
-                &nbsp;
-              </h2>
-              <h3 class="subtitle is-4 is-size-5-mobile dark-text">
-                Building for the web since 1999.
-              </h3>
-              <h5 class="subtitle is-5 is-size-6-mobile dark-text">
-                Working at <a href="https://www.passionatepeople.io">Passionate People</a>.
-              </h5>
-            </div>
-          </div>
-      </section>
-      <section class="section has-text-centered brands">
+    <section class="hero top">
+      <div class="hero-body">
         <div class="container">
-          <p class="title is-4 is-size-5-mobile purple-text">Brands I've worked for</p>
+          <h1 class="title">Tim van den Eijnden</h1>
+          <h2 class="subtitle scroll">
+            <span class="scroll-words">
+              <strong>Frontend</strong>
+              <strong>Vue</strong>
+              <strong>React</strong>
+              <strong>Javascript</strong>
+              <strong>Node.js</strong>
+              <strong>Software</strong>
+            </span>
+            <span class="scroll-suffix">Developer</span>
+          </h2>
+          <h3 class="subtitle tagline">Building for the web since 1999.</h3>
+          <h5 class="subtitle work">
+            Senior Full Stack Engineer at <a href="https://www.jumbo.com">Jumbo Supermarkten</a>.
+          </h5>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about">
+      <div class="container">
+        <p class="section-title">About</p>
+        <div class="about-box">
+          <p>
+            I’m a Senior Full Stack Engineer with a frontend focus, based in North Brabant, Netherlands.
+            I love building robust, scalable web applications with clean architecture and great developer experience.
+            My go-to stack these days is Vue, TypeScript, Node.js and GraphQL, but I’m equally comfortable with
+            React, Java/Spring Boot, Kubernetes and cloud infrastructure.
+          </p>
+          <p>
+            I’m open to technical leadership roles where I can help shape architecture, mentor developers
+            and still write plenty of code.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience">
+      <div class="container">
+        <p class="section-title">Highlights</p>
+        <div class="experience-list">
+          <div class="experience-item">
+            <h3>Jumbo Supermarkten</h3>
+            <p class="role">Senior Full Stack Engineer</p>
+            <p class="duration">2021 – Present</p>
+            <p>
+              Building customer-facing commerce solutions: product detail pages, promotions, search and basket.
+              Frontend with TypeScript, Vue 3 &amp; Nuxt 3; backend with Node.js, Java Spring Boot, GraphQL,
+              Kubernetes, Terraform and GitHub Actions.
+            </p>
+          </div>
+          <div class="experience-item">
+            <h3>GrandVision NV</h3>
+            <p class="role">Senior Frontend Developer</p>
+            <p class="duration">2020 – 2021</p>
+            <p>
+              Built a point-of-sale system for Pearle and Eye Wish stores using TypeScript, React,
+              Apollo GraphQL, Tailwind, Cypress, Azure and Electron.
+            </p>
+          </div>
+          <div class="experience-item">
+            <h3>Liberty Global</h3>
+            <p class="role">Senior Frontend Developer</p>
+            <p class="duration">2017 – 2020</p>
+            <p>
+              Developed the UI for next-gen 4K set-top boxes used by Ziggo, Telenet, UPC, VTR and Virgin Media.
+              Focus on vanilla JavaScript, Node.js, testing and developer tooling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects">
+      <div class="container">
+        <p class="section-title">Side projects</p>
+        <div class="project-grid">
+          <a class="project-card" href="https://dat2stl.timvandeneijnden.nl">
+            <h3>dat2stl</h3>
+            <p>Convert LDraw part files to STL models ready for 3D printing.</p>
+          </a>
+          <a class="project-card" href="https://organizer.timvandeneijnden.nl">
+            <h3>Organizer Generator</h3>
+            <p>Design custom organizers with compartments, ready to generate for 3D printing.</p>
+          </a>
+          <a class="project-card" href="https://klashussel.nl">
+            <h3>KlasHussel</h3>
+            <p>Create seating charts, shuffle students and pick names fairly.</p>
+          </a>
+          <a class="project-card" href="https://npmx.dev/~timvdeijnden">
+            <h3>npmx profile</h3>
+            <p>Public npm packages I maintain and publish.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills">
+      <div class="container">
+        <p class="section-title">Skills</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Vue.js</span>
+          <span class="skill-tag">Nuxt</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">GraphQL</span>
+          <span class="skill-tag">Java / Spring Boot</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Terraform</span>
+          <span class="skill-tag">Cypress</span>
+          <span class="skill-tag">GSAP</span>
+          <span class="skill-tag">Ruby on Rails</span>
+          <span class="skill-tag">PHP</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section brands">
+      <div class="container">
+        <p class="section-title">Brands I've worked for</p>
+        <div class="brand-grid">
           <img src="assets/images/asr.png" alt="ASR Verzekeringen">
           <img src="assets/images/bavaria.jpg" alt="Bavaria brouwerij">
-          <img src="assets/images/benenjerrys.png" alt="Ben & Jerry's">
+          <img src="assets/images/benenjerrys.png" alt="Ben &amp; Jerry's">
           <img src="assets/images/eyewish.png" alt="Eye wish">
           <img src="assets/images/gynzy.png" alt="Gynzy.com">
           <img src="assets/images/jumbo.png" alt="Jumbo">
@@ -82,39 +203,76 @@
           <img src="assets/images/VTR.jpg" alt="VTR">
           <img src="assets/images/ziggo.png" alt="Ziggo">
         </div>
+      </div>
     </section>
-    <section class="section has-text-centered profiles">
+
+    <section class="section profiles">
       <div class="container">
-        <p class="title is-4 is-size-5-mobile dark-text">Profiles</p>
-        <div class="buttons is-centered">
+        <p class="section-title">Profiles</p>
+        <div class="button-group">
           <a class="button" href="https://github.com/timvdeijnden/"><i class="fab fa-github"></i>&nbsp;GitHub</a>
           <a class="button" href="http://linkedin.com/in/timvandeneijnden"><i class="fab fa-linkedin"></i>&nbsp;LinkedIn</a>
-          <a class="button" href="http://stackoverflow.com/story/timvdeijnden"><i class="fab fa-stack-overflow"></i>&nbsp;Stackoverflow</a>
           <a class="button" href="http://twitter.com/timvdeijnden"><i class="fab fa-twitter"></i>&nbsp;Twitter</a>
         </div>
       </div>
     </section>
-    <section class="section has-text-centered workwith">
-      <div class="container purple-text">
-        <p class="title is-4 is-size-5-mobile purple-text">I love to work with</p>
-        <img src="assets/images/vscode.svg" title="VS Code"/>
-        <i class="fab fa-2x fa-apple" title="Apple"></i>
-        <i class="fab fa-2x fa-firefox" title="Firefox"></i>
-        <i class="fab fa-2x fa-chrome" title="Firefox"></i>
-        <i class="fab fa-2x fa-jira" title="Jira"></i>
-        <i class="fab fa-2x fa-js" title="Javascript"></i>
-        <i class="fab fa-2x fa-html5" title="HTML5"></i>
-        <i class="fab fa-2x fa-css3" title="CSS3"></i>
-        <i class="fab fa-2x fa-react" title="Ember"></i>
-        <i class="fab fa-2x fa-vuejs" title="Vue"></i>
-        <i class="fab fa-2x fa-git" title="Git"></i>
-        <i class="fab fa-2x fa-jenkins" title="Jenkins"></i>
-        <i class="fab fa-2x fa-node" title="Node.js"></i>
-        <i class="fab fa-2x fa-npm" title="NPM"></i>
-        <i class="fab fa-2x fa-yarn" title="Yarn"></i>
-        <i class="fab fa-2x fa-slack" title="Stlack"></i>
-        <i class="fab fa-2x fa-github-square" title="GitHub"></i>
+
+    <section class="section workwith">
+      <div class="container">
+        <p class="section-title">I love to work with</p>
+        <div class="icon-row">
+          <i class="fab fa-2x fa-apple" title="Apple"></i>
+          <svg class="simple-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" title="Vivaldi"><path d="M12 0C6.75 0 3.817 0 1.912 1.904.007 3.81 0 6.75 0 12s0 8.175 1.912 10.08C3.825 23.985 6.75 24 12 24c5.25 0 8.183 0 10.088-1.904C23.993 20.19 24 17.25 24 12s0-8.175-1.912-10.08C20.175.015 17.25 0 12 0zm-.168 3a9 9 0 016.49 2.648 9 9 0 010 12.704A9 9 0 1111.832 3zM7.568 7.496a1.433 1.433 0 00-.142.004A1.5 1.5 0 006.21 9.75l1.701 3c.93 1.582 1.839 3.202 2.791 4.822a1.417 1.417 0 001.41.75 1.5 1.5 0 001.223-.81l4.447-7.762A1.56 1.56 0 0018 8.768a1.5 1.5 0 10-2.828.914 2.513 2.513 0 01.256 1.119v.246a2.393 2.393 0 01-2.52 2.13 2.348 2.348 0 01-1.965-1.214c-.307-.51-.6-1.035-.9-1.553-.42-.72-.826-1.41-1.246-2.16a1.433 1.433 0 00-1.229-.754Z"/></svg>
+          <i class="fab fa-2x fa-jira" title="Jira"></i>
+          <i class="fab fa-2x fa-js" title="Javascript"></i>
+          <i class="fab fa-2x fa-html5" title="HTML5"></i>
+          <i class="fab fa-2x fa-css3" title="CSS3"></i>
+          <i class="fab fa-2x fa-vuejs" title="Vue"></i>
+          <svg class="simple-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" title="WebStorm"><path d="M0 0v24h24V0H0zm17.889 2.889c1.444 0 2.667.444 3.667 1.278l-1.111 1.667c-.889-.611-1.722-1-2.556-1s-1.278.389-1.278.889v.056c0 .667.444.889 2.111 1.333 2 .556 3.111 1.278 3.111 3v.056c0 2-1.5 3.111-3.611 3.111-1.5-.056-3-.611-4.167-1.667l1.278-1.556c.889.722 1.833 1.222 2.944 1.222.889 0 1.389-.333 1.389-.944v-.056c0-.556-.333-.833-2-1.278-2-.5-3.222-1.056-3.222-3.056v-.056c0-1.833 1.444-3 3.444-3zm-16.111.222h2.278l1.5 5.778 1.722-5.778h1.667l1.667 5.778 1.5-5.778h2.333l-2.833 9.944H9.723L8.112 7.277l-1.667 5.778H4.612L1.779 3.111zm.5 16.389h9V21h-9v-1.5z"/></svg>
+          <i class="fab fa-2x fa-git" title="Git"></i>
+          <i class="fab fa-2x fa-node" title="Node.js"></i>
+          <i class="fab fa-2x fa-java" title="Java"></i>
+          <svg class="simple-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" title="TypeScript"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg>
+          <svg class="simple-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" title="Spring"><path d="M21.8537 1.4158a10.4504 10.4504 0 0 1-1.284 2.2471A11.9666 11.9666 0 1 0 3.8518 20.7757l.4445.3951a11.9543 11.9543 0 0 0 19.6316-8.2971c.3457-3.0126-.568-6.8649-2.0743-11.458zM5.5805 20.8745a1.0174 1.0174 0 1 1-.1482-1.4323 1.0396 1.0396 0 0 1 .1482 1.4323zm16.1991-3.5806c-2.9385 3.9263-9.2601 2.5928-13.2852 2.7904 0 0-.7161.0494-1.4323.1481 0 0 .2717-.1234.6174-.2469 2.8398-.9877 4.1732-1.1853 5.9018-2.0743 3.2349-1.6545 6.4698-5.2844 7.1118-9.0379-1.2347 3.6053-4.9881 6.7167-8.3959 7.9761-2.3459.8643-6.5685 1.7039-6.5685 1.7039l-.1729-.0988c-2.8645-1.4076-2.9632-7.6304 2.2718-9.6306 2.2966-.889 4.4696-.395 6.9637-.9877 2.6422-.6174 5.7043-2.5929 6.939-5.1857 1.3828 4.1732 3.062 10.643.0493 14.6434z"/></svg>
+          <svg class="simple-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" title="pnpm"><path d="M0 0v7.5h7.5V0zm8.25 0v7.5h7.498V0zm8.25 0v7.5H24V0zM2 2h3.5v3.5H2zm8.25 0h3.498v3.5H10.25zm8.25 0H22v3.5h-3.5zM8.25 8.25v7.5h7.498v-7.5zm8.25 0v7.5H24v-7.5zm2 2H22v3.5h-3.5zM0 16.5V24h7.5v-7.5zm8.25 0V24h7.498v-7.5zm8.25 0V24H24v-7.5z"/></svg>
+          <svg class="simple-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" title="OpenCode"><path d="M22 24H2V0h20zM17 4.8H7v14.4h10z"/></svg>
+          <svg class="simple-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" title="Ghostty"><path d="M12 0C6.7 0 2.4 4.3 2.4 9.6v11.146c0 1.772 1.45 3.267 3.222 3.254a3.18 3.18 0 0 0 1.955-.686 1.96 1.96 0 0 1 2.444 0 3.18 3.18 0 0 0 1.976.686c.75 0 1.436-.257 1.98-.686.715-.563 1.71-.587 2.419-.018.59.476 1.355.743 2.182.699 1.705-.094 3.022-1.537 3.022-3.244V9.601C21.6 4.3 17.302 0 12 0M6.069 6.562a1 1 0 0 1 .46.131l3.578 2.065v.002a.974.974 0 0 1 0 1.687L6.53 12.512a.975.975 0 0 1-.976-1.687L7.67 9.602 5.553 8.38a.975.975 0 0 1 .515-1.818m7.438 2.063h4.7a.975.975 0 1 1 0 1.95h-4.7a.975.975 0 0 1 0-1.95"/></svg>
+          <i class="fab fa-2x fa-slack" title="Slack"></i>
+          <i class="fab fa-2x fa-github-square" title="GitHub"></i>
+        </div>
       </div>
     </section>
+
+    <script>
+      (function () {
+        const revealSelectors = [
+          '.section-title',
+          '.about-box',
+          '.experience-item',
+          '.project-card',
+          '.skill-tag',
+          '.brand-grid img',
+          '.profiles .button',
+          '.icon-row'
+        ];
+        document.querySelectorAll(revealSelectors.join(', ')).forEach(el => el.classList.add('reveal'));
+
+        if (!('IntersectionObserver' in window)) {
+          document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+          return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      })();
+    </script>
   </body>
 </html>

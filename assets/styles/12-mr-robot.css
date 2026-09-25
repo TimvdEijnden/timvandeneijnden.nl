@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background: #0a0a0a;
+    color: #d0d0d0;
+    line-height: 1.5;
+}
+
+.container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+
+.hero {
+    padding: 5rem 0 3rem;
+    text-align: center;
+    background: #0a0a0a;
+    border-bottom: 1px solid #e70000;
+}
+
+.title {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+}
+
+.scroll {
+    position: relative;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    color: #e70000;
+}
+
+.scroll-words {
+    position: absolute;
+    right: 50%;
+    width: 50%;
+    height: 100%;
+    text-align: right;
+    overflow: hidden;
+    padding-right: 0.3em;
+}
+
+.scroll-words strong {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    line-height: 1.5em;
+    opacity: 0;
+}
+
+.scroll-words strong:nth-child(1) { animation: word1 18s infinite; }
+.scroll-words strong:nth-child(2) { animation: word2 18s infinite; }
+.scroll-words strong:nth-child(3) { animation: word3 18s infinite; }
+.scroll-words strong:nth-child(4) { animation: word4 18s infinite; }
+.scroll-words strong:nth-child(5) { animation: word5 18s infinite; }
+.scroll-words strong:nth-child(6) { animation: word6 18s infinite; }
+
+@keyframes word1 { 0%, 4% { opacity: 0; transform: translateY(30px); } 8%, 16% { opacity: 1; transform: translateY(0); } 20%, 100% { opacity: 0; transform: translateY(-30px); } }
+@keyframes word2 { 0%, 20% { opacity: 0; transform: translateY(30px); } 24%, 32% { opacity: 1; transform: translateY(0); } 36%, 100% { opacity: 0; transform: translateY(-30px); } }
+@keyframes word3 { 0%, 36% { opacity: 0; transform: translateY(30px); } 40%, 48% { opacity: 1; transform: translateY(0); } 52%, 100% { opacity: 0; transform: translateY(-30px); } }
+@keyframes word4 { 0%, 52% { opacity: 0; transform: translateY(30px); } 56%, 64% { opacity: 1; transform: translateY(0); } 68%, 100% { opacity: 0; transform: translateY(-30px); } }
+@keyframes word5 { 0%, 68% { opacity: 0; transform: translateY(30px); } 72%, 80% { opacity: 1; transform: translateY(0); } 84%, 100% { opacity: 0; transform: translateY(-30px); } }
+@keyframes word6 { 0%, 84% { opacity: 0; transform: translateY(30px); } 88%, 96% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-30px); } }
+
+.scroll-suffix {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    text-align: left;
+    padding-left: 0.3em;
+}
+
+.tagline { font-size: 1.3rem; color: #888; margin-bottom: 0.5rem; }
+.work { color: #888; font-size: 1.1rem; }
+.work a { color: #e70000; text-decoration: none; }
+
+.section { padding: 3rem 0; text-align: center; }
+
+.section-title {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.4rem;
+    color: #e70000;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.about-box {
+    background: #111;
+    border-left: 3px solid #e70000;
+    padding: 1.5rem;
+    text-align: left;
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.about-box p { margin-bottom: 1rem; }
+
+.experience-list { text-align: left; }
+.experience-item {
+    background: #111;
+    border-left: 3px solid #e70000;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.experience-item h3 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
+    color: #e70000;
+    margin-bottom: 0.3rem;
+}
+.experience-item .role { color: #fff; font-weight: 700; font-size: 1.05rem; }
+.experience-item .duration { color: #777; font-size: 0.9rem; margin-bottom: 0.5rem; }
+.experience-item p { color: #bbb; font-size: 0.95rem; }
+
+.skill-tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem; }
+.skill-tag {
+    background: #111;
+    color: #e70000;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #e70000;
+    font-size: 0.9rem;
+}
+
+.brand-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+.brand-grid img {
+    height: 2.5rem; width: auto; max-width: 8rem; object-fit: contain;
+    background: #fff;
+    padding: 6px 10px;
+    border: 1px solid #333;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+.brand-grid img:hover { filter: grayscale(0%); border-color: #e70000; }
+
+.button-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.7rem 1.4rem;
+    background: transparent;
+    color: #e70000;
+    text-decoration: none;
+    border: 1px solid #e70000;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.button:hover { background: #e70000; color: #fff; }
+
+.icon-row { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; font-size: 2rem; color: #e70000; }
+.simple-icon { width: 2rem; height: 2rem; fill: currentColor; }
+
+.profiles { background: #111; border-top: 1px solid #e70000; border-bottom: 1px solid #e70000; }
+
+@media (max-width: 600px) {
+    .title { font-size: 2rem; }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 4px, rgba(231,0,0,0.04) 4px, rgba(231,0,0,0.04) 5px);
+    animation: noise 0.5s steps(2) infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+@keyframes noise { 0% { transform: translateY(0); } 100% { transform: translateY(5px); } }
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        repeating-linear-gradient(0deg, transparent 0, transparent 3px, rgba(231,0,0,0.04) 3px, rgba(231,0,0,0.04) 4px),
+        repeating-linear-gradient(90deg, transparent 0, transparent 3px, rgba(255,255,255,0.03) 3px, rgba(255,255,255,0.03) 4px),
+        radial-gradient(ellipse at 50% 0%, rgba(231,0,0,0.12) 0%, transparent 50%),
+        #0a0a0a;
+    animation: bg-crt 0.3s steps(2) infinite;
+}
+@keyframes bg-crt { 0% { background-position: 0 0, 0 0, 0 0, 0 0; } 100% { background-position: 0 4px, 4px 0, 0 0, 0 0; } }
+
+.project-card {
+    background: #111;
+    border: 1px solid #e70000;
+    color: #d0d0d0;
+}
+.project-card:hover { box-shadow: 0 0 15px rgba(231, 0, 0, 0.4); }
+
+.projects {
+    background: #111;
+    border-top: 1px solid #e70000;
+    border-bottom: 1px solid #e70000;
+}
