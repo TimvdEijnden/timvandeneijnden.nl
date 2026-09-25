@@ -74,3 +74,12 @@ body::before {
     border-top: 1px solid #e9e9e9;
     border-bottom: 1px solid #e9e9e9;
 }
+
+html[data-theme="01-minimalist"] .reveal.visible {
+    animation: minimalist-reveal 680ms ease-out var(--reveal-delay, 0ms) both;
+}
+html[data-theme="01-minimalist"] .theme-menu { color: #555; }
+@keyframes minimalist-reveal {
+    0% { opacity: 0; transform: scale(0.985); filter: blur(2px); }
+    100% { opacity: 1; transform: none; filter: blur(0); }
+}

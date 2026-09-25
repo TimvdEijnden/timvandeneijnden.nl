@@ -73,3 +73,13 @@ body::before {
     border-top: 8px solid #000;
     border-bottom: 8px solid #000;
 }
+
+html[data-theme="04-brutalist"] .reveal.visible {
+    animation: brutalist-reveal 430ms steps(5, end) var(--reveal-delay, 0ms) both;
+}
+html[data-theme="04-brutalist"] .theme-menu { color: #000; }
+@keyframes brutalist-reveal {
+    0% { opacity: 0; transform: translateX(-34px) skewX(-5deg); }
+    65% { opacity: 1; transform: translateX(5px) skewX(1deg); }
+    100% { opacity: 1; transform: none; }
+}

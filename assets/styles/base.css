@@ -69,6 +69,55 @@
     text-align: center;
 }
 
+.hero {
+    position: relative;
+}
+
+.theme-menu {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: inherit;
+    font-size: 0.75rem;
+    opacity: 0.68;
+    transition: opacity 180ms ease;
+}
+
+.theme-menu:hover,
+.theme-menu:focus-within {
+    opacity: 1;
+}
+
+.theme-menu label {
+    font-size: inherit;
+}
+
+.theme-menu select {
+    max-width: 8.5rem;
+    padding: 0.2rem 1.1rem 0.2rem 0.25rem;
+    border: 0;
+    border-bottom: 1px solid currentColor;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.theme-menu select:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+.theme-menu option {
+    background: #fff;
+    color: #222;
+}
+
 .workwith .icon-row i,
 .workwith .icon-row svg,
 .workwith .icon-row .simple-icon {
@@ -118,19 +167,28 @@
 
 .reveal {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .reveal.visible {
     opacity: 1;
-    transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
+    html body .reveal,
+    html body .reveal.visible {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+        clip-path: none !important;
+        transition: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .theme-menu {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 0.7rem;
     }
 }

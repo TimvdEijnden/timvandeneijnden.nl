@@ -202,3 +202,17 @@ body::before {
     border-top: 1px solid #e70000;
     border-bottom: 1px solid #e70000;
 }
+
+html[data-theme="12-mr-robot"] .reveal.visible {
+    animation: mr-robot-reveal 720ms steps(1, end) var(--reveal-delay, 0ms) both;
+}
+@keyframes mr-robot-reveal {
+    0% { opacity: 0; transform: translateX(-5px); filter: contrast(2); }
+    16% { opacity: 1; transform: translateX(4px) skewX(-2deg); }
+    30% { opacity: 0.25; transform: translateX(-3px); }
+    48% { opacity: 1; transform: translateX(2px); filter: contrast(1.4); }
+    62% { opacity: 0.6; transform: translateX(-1px); }
+    100% { opacity: 1; transform: none; filter: none; }
+}
+
+html[data-theme="12-mr-robot"] .theme-menu select { color: #e70000; }

@@ -72,3 +72,14 @@ body::before {
     border-top: 4px ridge #c0c0c0;
     border-bottom: 4px ridge #c0c0c0;
 }
+
+html[data-theme="03-retro-90s"] .reveal.visible {
+    animation: retro-reveal 560ms steps(6, end) var(--reveal-delay, 0ms) both;
+}
+html[data-theme="03-retro-90s"] .theme-menu { color: #ffff00; }
+@keyframes retro-reveal {
+    0% { opacity: 0; transform: scaleY(0.08); clip-path: inset(48% 0 48%); }
+    45% { opacity: 1; transform: scaleY(1.04); clip-path: inset(0); }
+    70% { transform: scaleY(0.98); }
+    100% { opacity: 1; transform: none; clip-path: inset(0); }
+}

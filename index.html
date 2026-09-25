@@ -23,20 +23,22 @@
     <link rel="stylesheet" href="assets/styles/base.css">
     <script>
       (function () {
-        const styles = [
-          'current',
-          '01-minimalist',
-          '03-retro-90s',
-          '04-brutalist',
-          '06-cyberpunk',
-          '07-nature-organic',
-          '08-swiss-design',
-          '11-matrix',
-          '12-mr-robot',
-          '13-severance'
+        window.siteThemes = [
+          { id: 'current', label: 'Current' },
+          { id: '01-minimalist', label: 'Minimalist' },
+          { id: '03-retro-90s', label: 'Retro 90s' },
+          { id: '04-brutalist', label: 'Brutalist' },
+          { id: '06-cyberpunk', label: 'Cyberpunk' },
+          { id: '07-nature-organic', label: 'Nature' },
+          { id: '08-swiss-design', label: 'Swiss Design' },
+          { id: '11-matrix', label: 'Matrix' },
+          { id: '12-mr-robot', label: 'Mr. Robot' },
+          { id: '13-severance', label: 'Severance' }
         ];
-        const chosen = styles[Math.floor(Math.random() * styles.length)];
+        const chosen = window.siteThemes[Math.floor(Math.random() * window.siteThemes.length)].id;
+        document.documentElement.dataset.theme = chosen;
         const link = document.createElement('link');
+        link.id = 'theme-stylesheet';
         link.rel = 'stylesheet';
         link.href = 'assets/styles/' + chosen + '.css';
         document.head.appendChild(link);
@@ -55,6 +57,10 @@
   <body>
     <section class="hero top">
       <div class="hero-body">
+        <nav class="theme-menu" aria-label="Choose a visual theme">
+          <label for="theme-select">Theme</label>
+          <select id="theme-select" aria-label="Visual theme"></select>
+        </nav>
         <div class="container">
           <h1 class="title">Tim van den Eijnden</h1>
           <h2 class="subtitle scroll">
@@ -245,6 +251,20 @@
 
     <script>
       (function () {
+        const themeSelect = document.getElementById('theme-select');
+        window.siteThemes.forEach(theme => {
+          const option = document.createElement('option');
+          option.value = theme.id;
+          option.textContent = theme.label;
+          themeSelect.appendChild(option);
+        });
+        themeSelect.value = document.documentElement.dataset.theme;
+        themeSelect.addEventListener('change', () => {
+          const chosen = themeSelect.value;
+          document.documentElement.dataset.theme = chosen;
+          document.getElementById('theme-stylesheet').href = 'assets/styles/' + chosen + '.css';
+        });
+
         const revealSelectors = [
           '.section-title',
           '.about-box',
@@ -255,7 +275,12 @@
           '.profiles .button',
           '.icon-row'
         ];
-        document.querySelectorAll(revealSelectors.join(', ')).forEach(el => el.classList.add('reveal'));
+        revealSelectors.forEach(selector => {
+          document.querySelectorAll(selector).forEach((el, index) => {
+            el.classList.add('reveal');
+            el.style.setProperty('--reveal-delay', `${Math.min(index, 8) * 55}ms`);
+          });
+        });
 
         if (!('IntersectionObserver' in window)) {
           document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));

@@ -208,3 +208,15 @@ body::before {
     border-top: 1px solid #0f0;
     border-bottom: 1px solid #0f0;
 }
+
+html[data-theme="11-matrix"] .reveal.visible {
+    animation: matrix-reveal 760ms steps(7, end) var(--reveal-delay, 0ms) both;
+}
+@keyframes matrix-reveal {
+    0% { opacity: 0; transform: translateY(-24px) scaleY(1.12); filter: blur(4px); }
+    35% { opacity: 0.25; }
+    55% { opacity: 1; transform: translateY(3px) scaleY(0.98); filter: blur(0); }
+    100% { opacity: 1; transform: none; }
+}
+
+html[data-theme="11-matrix"] .theme-menu select { color: #0f0; }

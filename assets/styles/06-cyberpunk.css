@@ -76,3 +76,16 @@ body::before {
     border-top: 1px solid #ff00ff;
     border-bottom: 1px solid #00ffff;
 }
+
+html[data-theme="06-cyberpunk"] .reveal.visible {
+    animation: cyberpunk-reveal 680ms steps(1, end) var(--reveal-delay, 0ms) both;
+}
+html[data-theme="06-cyberpunk"] .theme-menu { color: #00ffff; }
+@keyframes cyberpunk-reveal {
+    0% { opacity: 0; transform: translateX(-8px); filter: hue-rotate(90deg); }
+    18% { opacity: 1; transform: translateX(7px); filter: hue-rotate(-90deg); }
+    34% { opacity: 0.25; transform: translateX(-4px); }
+    52% { opacity: 1; transform: translateX(3px); filter: hue-rotate(35deg); }
+    68% { opacity: 0.55; transform: translateX(-2px); }
+    100% { opacity: 1; transform: none; filter: none; }
+}
