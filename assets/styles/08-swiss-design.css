@@ -86,4 +86,4 @@ html[data-theme="08-swiss-design"] .reveal.visible {
     100% { opacity: 1; transform: none; clip-path: inset(0); }
 }
 
-html[data-theme="08-swiss-design"] .theme-menu select { color: #000; }
+html[data-theme="08-swiss-design"] .theme-menu { color: #000; }

@@ -219,4 +219,4 @@ html[data-theme="11-matrix"] .reveal.visible {
     100% { opacity: 1; transform: none; }
 }
 
-html[data-theme="11-matrix"] .theme-menu select { color: #0f0; }
+html[data-theme="11-matrix"] .theme-menu { color: #0f0; }

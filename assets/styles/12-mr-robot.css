@@ -215,4 +215,4 @@ html[data-theme="12-mr-robot"] .reveal.visible {
     100% { opacity: 1; transform: none; filter: none; }
 }
 
-html[data-theme="12-mr-robot"] .theme-menu select { color: #e70000; }
+html[data-theme="12-mr-robot"] .theme-menu { color: #e70000; }

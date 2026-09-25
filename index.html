@@ -24,7 +24,7 @@
     <script>
       (function () {
         window.siteThemes = [
-          { id: 'current', label: 'Current' },
+          { id: 'current', label: 'Purple' },
           { id: '01-minimalist', label: 'Minimalist' },
           { id: '03-retro-90s', label: 'Retro 90s' },
           { id: '04-brutalist', label: 'Brutalist' },
@@ -58,8 +58,13 @@
     <section class="hero top">
       <div class="hero-body">
         <nav class="theme-menu" aria-label="Choose a visual theme">
-          <label for="theme-select">Theme</label>
-          <select id="theme-select" aria-label="Visual theme"></select>
+          <details id="theme-picker">
+            <summary>
+              <span>Theme</span>
+              <svg class="theme-chevron" aria-hidden="true" viewBox="0 0 12 12"><path d="m2 4 4 4 4-4"/></svg>
+            </summary>
+            <div class="theme-options" id="theme-options" role="group" aria-label="Visual themes"></div>
+          </details>
         </nav>
         <div class="container">
           <h1 class="title">Tim van den Eijnden</h1>
@@ -251,18 +256,37 @@
 
     <script>
       (function () {
-        const themeSelect = document.getElementById('theme-select');
+        const themePicker = document.getElementById('theme-picker');
+        const themeOptions = document.getElementById('theme-options');
+        const themeStylesheet = document.getElementById('theme-stylesheet');
+
         window.siteThemes.forEach(theme => {
-          const option = document.createElement('option');
-          option.value = theme.id;
+          const option = document.createElement('button');
+          option.type = 'button';
           option.textContent = theme.label;
-          themeSelect.appendChild(option);
+          option.setAttribute('aria-pressed', String(theme.id === document.documentElement.dataset.theme));
+          option.addEventListener('click', () => {
+            document.documentElement.dataset.theme = theme.id;
+            themeStylesheet.href = 'assets/styles/' + theme.id + '.css';
+            themeOptions.querySelectorAll('button').forEach(button => {
+              button.setAttribute('aria-pressed', String(button === option));
+            });
+            themePicker.open = false;
+            themePicker.querySelector('summary').focus();
+          });
+          themeOptions.appendChild(option);
         });
-        themeSelect.value = document.documentElement.dataset.theme;
-        themeSelect.addEventListener('change', () => {
-          const chosen = themeSelect.value;
-          document.documentElement.dataset.theme = chosen;
-          document.getElementById('theme-stylesheet').href = 'assets/styles/' + chosen + '.css';
+
+        themePicker.addEventListener('keydown', event => {
+          if (event.key === 'Escape' && themePicker.open) {
+            themePicker.open = false;
+            themePicker.querySelector('summary').focus();
+          }
+        });
+        document.addEventListener('click', event => {
+          if (themePicker.open && !themePicker.contains(event.target)) {
+            themePicker.open = false;
+          }
         });
 
         const revealSelectors = [

@@ -84,4 +84,4 @@ html[data-theme="07-nature-organic"] .reveal.visible {
     100% { opacity: 1; transform: none; filter: blur(0); }
 }
 
-html[data-theme="07-nature-organic"] .theme-menu select { color: #4a6741; }
+html[data-theme="07-nature-organic"] .theme-menu { color: #4a6741; }
