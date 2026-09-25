@@ -324,7 +324,7 @@ body::before {
 html[data-theme="current"] .reveal.visible {
     animation: current-reveal 720ms cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0ms) both;
 }
-html[data-theme="current"] .theme-menu { color: #5926ae; }
+html[data-theme="current"] .theme-menu { color: #fff; opacity: 0.9; }
 @keyframes current-reveal {
     0% { opacity: 0; transform: translateY(30px) scale(0.96); filter: blur(7px); }
     65% { opacity: 1; }
